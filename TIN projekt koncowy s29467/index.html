@@ -1,0 +1,99 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="top">
+			<h1>PJTK Restaurant</h1>
+			<h2>Welcome to our restaurant!</h2>
+			<p>We build our menu around what is fresh and seasonal. Come visit us and check out our wonderful crunchy crust and ingredients from all over the world.</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>Menu:</h2>
+		<table id="menu-table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Ingredients</th>
+					<th>Medium</th>
+					<th>Big</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Tabela Zamówień -->
+	<div class="order-container">
+		<h2>Add Order</h2>
+		<form id="pizza-order-form">
+			<label for="pizza-type">Choose your pizza:</label>
+			<select id="pizza-type" required>
+				<option value="" disabled selected>Choose pizza</option>
+			</select>
+			
+			<label for="pizza-size">Size</label>
+			<select id="pizza-size" required>
+				<option value="" disabled selected>Choose size</option>
+				<option value="Medium">Medium</option>
+				<option value="Large">Large</option>
+			</select>
+			
+			<label for="pizza-quantity">Amount</label>
+			<input type="number" id="pizza-quantity" min="1" placeholder="Add amount" required>
+			
+			<label for="customer-name">Client's name</label>
+			<input type="text" id="customer-name" placeholder="Insert client name" required>
+			
+			<button type="submit">Add order</button>
+		</form>
+
+		<h2>Orders list:</h2>
+		<table id="order-table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Pizza</th>
+					<th>Size</th>
+					<th>Amount</th>
+					<th>Price</th>
+					<th>Client</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="7" class="center">No orders</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4" class="right-align"><strong>Total:</strong></td>
+					<td id="total-price">0$</td>
+					<td colspan="2"></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+
+	<div class="info">
+		<i class="fa fa-shopping-cart fa-4x"></i>
+		<h3>Choose your meal</h3>
+		<p>You can customize your meal to make it the best for you!
+			Choose from our wide variety of fresh ingredients and order online.</p>
+		<i class="fa fa-credit-card-alt fa-3x"></i>
+		<h3>Pay online or on delivery</h3>
+		<p>You choose how to pay for the meal - online or on delivery.</p>
+		<i class="fa fa-pie-chart fa-4x"></i>
+		<h3>Get the order</h3>
+		<p>Enjoy your meal!</p>
+	</div>
+
+	<script src="script.js"></script>
+</body>
